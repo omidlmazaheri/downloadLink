@@ -13,15 +13,37 @@
             direction: rtl;
             font-family: vazirmatn fd;
         }
-        h2:hover{
-            color: red;
-           
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            /* وسط‌چینی افقی */
+            align-items: center;
+            /* وسط‌چینی عمودی */
+            height: 100vh;
+            /* کل ارتفاع صفحه */
+            background-color: #f0f0f0;
         }
-        main{
+
+        .centered-box {
+            padding: 20px 40px;
+            background-color: #0077cc;
+            color: white;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        h2:hover {
+            color: red;
+
+        }
+
+        main {
             width: 70%;
             margin: 10px auto;
         }
-        h2{
+
+        h2 {
             text-align: center;
         }
 
@@ -44,10 +66,12 @@
         tr:nth-child(odd) {
             background-color: #dddddd;
         }
-        #tableHeader{
+
+        #tableHeader {
             background-color: #121212;
             color: white;
         }
+
         #rowCounter {
             width: 5%;
         }
@@ -71,11 +95,40 @@
         #desc {
             width: 45%;
         }
+
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            padding: 10px;
+            flex-wrap: wrap;
+            /* برای تطبیق‌پذیری در نمایش‌های کوچکتر */
+        }
+
+        .pagination a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #0077cc;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+        }
+
+        .pagination a:hover {
+            background-color: #005fa3;
+        }
     </style>
 </head>
 
 <body>
+    <div class="wrapper">
+        <div class="centered-box">من در مرکز هستم</div>
+    </div>
     <main>
+
         <h2>جدول اطلاعات دانشجویان</h2>
         <table>
 
@@ -224,8 +277,12 @@
             </tr>
         </table>
     </main>
-    <div>
-        <i class="fa-solid fa-backward-step"></i>
+    <div class="pagination">
+        <a href="#"><i class="fas fa-angle-double-left"></i></a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#"><i class="fas fa-angle-double-right"></i></a>
     </div>
 
 </body>
